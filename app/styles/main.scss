@@ -1,0 +1,143 @@
+@import "reset.scss";
+@import "variables.scss";
+
+// Starting with global classes
+
+body {
+  background: $posterColor;
+  color: $fontColor;
+  font-size: 16px;
+  line-height: 1.6em;
+  font-family: "Gotham", sans-serif;
+}
+.wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  clear: both;
+}
+.intro {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.textIntro {
+  font-size: 24px;
+  line-height: 1.5em;
+  margin-top: 10vh;
+}
+.textDescription {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 40px;
+}
+.wrapper {
+  margin-top: 40px;
+}
+footer {
+  padding-bottom: 80px;
+}
+
+
+::selection {
+  background: $selection;
+}
+::-moz-selection {
+  background: $selection;
+}
+
+a:link, a:visited, a:active {
+  color: $accentColor;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $accentColor;
+  transition: linear 0.2s;
+}
+a:focus, a:hover {
+  // color: darken($accentColor, 20%);
+  // border-bottom-color: darken($accentColor, 20%);
+  color: $selection;
+  border-bottom-color: $selection;
+}
+
+.copyright {
+  color: $meta;
+  margin-top: 16px;
+}
+
+.footerNavi {
+}
+.footerNavi li {
+  display: block;
+  padding-right: 8px;
+}
+.footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
+  color: $fontColor;
+  display: block;
+  border-bottom: 1px solid lighten($posterColor, 10%);
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+.footerNavi li a:hover, .footerNavi li a:focus {
+  color: $selection;
+  border-bottom-color: $selection;
+}
+.portfolio {
+  overflow: hidden;
+}
+.portfolioItem {
+  float: left;
+}
+// Desktop starts here
+
+@media screen and (min-width: 1280px) {
+  .textIntro {
+    font-size: 40px;
+    line-height: 1.5em;
+    margin-top: 20vh;
+  }
+  .textDescription {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .wrapper, .intro {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  .wrapper {
+    margin-top: 80px;
+  }
+  .textwrapper {
+    max-width: 700px;
+  }
+  section {
+
+  }
+  footer {
+    padding-bottom: 160px;
+  }
+
+  .footerNavi {
+  }
+  .footerNavi li {
+    display: inline-block;
+    padding-right: 8px;
+  }
+  .footerNavi li::after {
+    padding-left: 14px;
+    content: "|"
+  }
+  .footerNavi li:last-child::after {
+    content: "";
+  }
+  .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
+    color: $fontColor;
+    display: inherit;
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+  }
+  .footerNavi li a:hover, .footerNavi li a:focus {
+    color: $selection;
+    border-bottom-color: $selection;
+  }
+
+}
