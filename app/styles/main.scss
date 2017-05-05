@@ -8,7 +8,9 @@ body {
   color: $fontColor;
   font-size: 16px;
   line-height: 1.6em;
-  font-family: "Gotham", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .wrapper {
   padding-left: 16px;
@@ -20,7 +22,7 @@ body {
     padding-right: 16px;
 }
 .textIntro {
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1.5em;
   margin-top: 10vh;
 }
@@ -52,8 +54,6 @@ a:link, a:visited, a:active {
   transition: linear 0.2s;
 }
 a:focus, a:hover {
-  // color: darken($accentColor, 20%);
-  // border-bottom-color: darken($accentColor, 20%);
   color: $selection;
   border-bottom-color: $selection;
 }
@@ -85,6 +85,49 @@ a:focus, a:hover {
 }
 .portfolioItem {
   float: left;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 40px;
+    transition: linear 0.2s;
+    overflow: visible;
+}
+.portfolio a:nth-child(3n+0) .portfolioItem {
+  margin-right: 0;
+}
+.fakeLink {
+  width: auto;
+  color: $accentColor;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid $accentColor;
+  transition: linear 0.2s;
+}
+.portfolioImage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.portfolioItem .portfolioImage img {
+  width: 100%;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.portfolio a {
+  color: $fontColor;
+  overflow: hidden;
+}
+.portfolio a:hover .portfolioItem .portfolioImage img{
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.portfolioItem:hover .fakeLink, .portfolioItem:focus .fakeLink {
+  cursor: pointer;
+  color: $selection;
+  border-bottom-color: $selection;
 }
 // Desktop starts here
 
@@ -109,35 +152,40 @@ a:focus, a:hover {
   .textwrapper {
     max-width: 700px;
   }
+  p {
+    margin-bottom: 16px;
+  }
+  h1 {
+    margin-bottom: 32px;
+    font-size: 40px;
+  }
   section {
 
   }
   footer {
     padding-bottom: 160px;
   }
-
   .footerNavi {
   }
   .footerNavi li {
     display: inline-block;
     padding-right: 8px;
   }
-  .footerNavi li::after {
-    padding-left: 14px;
-    content: "|"
-  }
   .footerNavi li:last-child::after {
     content: "";
   }
   .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
-    color: $fontColor;
+    color: $accentColor;
     display: inherit;
     border-bottom: 1px solid;
-    padding-bottom: 3px;
+    padding-bottom: 0px;
   }
   .footerNavi li a:hover, .footerNavi li a:focus {
     color: $selection;
     border-bottom-color: $selection;
+  }
+  .portfolioItem {
+    width: 340px;
   }
 
 }

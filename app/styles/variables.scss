@@ -5,7 +5,24 @@ $selection: #23D5FF;
 $fontColor: #FFFFFF;
 $darkColor: #333333;
 
+
 $posterColor: #0F141B;
 $uphill: #3F5169;
 
-$meta: lighten($uphill, 10%);
+$meta: lighten($posterColor, 10%);
+
+
+//
+//
+//
+// $accentColor: #35E1D0;
+// $selection: #1EFEA5;
+//
+//
+// $fontColor: #333333;
+// $darkColor: #333333;
+//
+// $posterColor: #FFFFFF;
+// $uphill: #3F5169;
+//
+// $meta: darken($posterColor, 20%);
