@@ -106,6 +106,8 @@ a:focus, a:hover {
   position: relative;
   overflow: hidden;
   width: 100%;
+  line-height: 0;
+  margin-bottom: 16px;
 }
 .portfolioItem .portfolioImage img {
   width: 100%;
