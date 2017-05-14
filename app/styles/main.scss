@@ -50,12 +50,14 @@ a:link, a:visited, a:active {
   color: $accentColor;
   text-decoration: none;
   padding-bottom: 3px;
-  border-bottom: 1px solid $accentColor;
+  border-bottom: 0px solid $accentColor;
   transition: linear 0.2s;
+  border-bottom-color: rgba($selection,0%);
 }
 a:focus, a:hover {
   color: $selection;
   border-bottom-color: $selection;
+  border-bottom: 1px solid;
 }
 
 .copyright {
@@ -72,9 +74,10 @@ a:focus, a:hover {
 .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
   color: $fontColor;
   display: block;
-  border-bottom: 1px solid lighten($posterColor, 10%);
-  padding-bottom: 16px;
-  padding-top: 16px;
+  border-bottom: 0px solid;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding: 0;
 }
 .footerNavi li a:hover, .footerNavi li a:focus {
   color: $selection;
@@ -99,8 +102,9 @@ a:focus, a:hover {
   color: $accentColor;
   text-decoration: none;
   padding-bottom: 3px;
-  border-bottom: 1px solid $accentColor;
+  border-bottom: 0px solid $accentColor;
   transition: linear 0.2s;
+  border-bottom-color: rgba($selection,0%);
 }
 .portfolioImage {
   position: relative;
@@ -126,10 +130,14 @@ a:focus, a:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
+.portfolioItem .fakeLink {
+  transition: linear 0.2s;
+}
 .portfolioItem:hover .fakeLink, .portfolioItem:focus .fakeLink {
   cursor: pointer;
   color: $selection;
   border-bottom-color: $selection;
+  border-bottom: 1px solid;
 }
 // Desktop starts here
 
@@ -180,11 +188,12 @@ a:focus, a:hover {
     color: $accentColor;
     display: inherit;
     border-bottom: 1px solid;
-    padding-bottom: 0px;
+    border-bottom-color: rgba($selection,0%);
   }
   .footerNavi li a:hover, .footerNavi li a:focus {
     color: $selection;
     border-bottom-color: $selection;
+    border-bottom: 1px solid;
   }
   .portfolioItem {
     width: 340px;
