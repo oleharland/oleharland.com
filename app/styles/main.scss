@@ -1,3 +1,5 @@
+// Import other librarys
+
 @import "reset.scss";
 @import "variables.scss";
 
@@ -17,6 +19,9 @@ body {
   padding-right: 16px;
   clear: both;
 }
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: "proxima-nova", sans-serif;
+}
 .intro {
     padding-left: 16px;
     padding-right: 16px;
@@ -25,6 +30,7 @@ body {
   font-size: 32px;
   line-height: 1.5em;
   margin-top: 10vh;
+  font-weight: 600;
 }
 .textDescription {
   font-size: 16px;
@@ -37,15 +43,15 @@ body {
 footer {
   padding-bottom: 80px;
 }
-
-
+.proxima {
+  font-family: "proxima-nova", sans-serif;
+}
 ::selection {
   background: $selection;
 }
 ::-moz-selection {
   background: $selection;
 }
-
 a:link, a:visited, a:active {
   color: $accentColor;
   text-decoration: none;
@@ -59,7 +65,6 @@ a:focus, a:hover {
   border-bottom-color: $selection;
   border-bottom: 1px solid;
 }
-
 .copyright {
   color: $meta;
   margin-top: 16px;
@@ -74,10 +79,11 @@ a:focus, a:hover {
 .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
   color: $fontColor;
   display: block;
-  border-bottom: 0px solid;
+  border-bottom: 1px solid;
   margin-bottom: 16px;
   margin-top: 16px;
-  padding: 0;
+  padding-bottom: 16px;
+  border-bottom-color: darken($posterColor, 10%);
 }
 .footerNavi li a:hover, .footerNavi li a:focus {
   color: $selection;
@@ -120,7 +126,6 @@ a:focus, a:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .portfolio a {
   color: $fontColor;
   overflow: hidden;
@@ -139,9 +144,14 @@ a:focus, a:hover {
   border-bottom-color: $selection;
   border-bottom: 1px solid;
 }
+
+
 // Desktop starts here
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 786px) {
+  .portfolioItem {
+    width: 30%;
+  }
   .textIntro {
     font-size: 40px;
     line-height: 1.5em;
@@ -169,9 +179,6 @@ a:focus, a:hover {
     margin-bottom: 32px;
     font-size: 40px;
   }
-  section {
-
-  }
   footer {
     padding-bottom: 160px;
   }
@@ -189,14 +196,32 @@ a:focus, a:hover {
     display: inherit;
     border-bottom: 1px solid;
     border-bottom-color: rgba($selection,0%);
+    padding: 0;
   }
   .footerNavi li a:hover, .footerNavi li a:focus {
     color: $selection;
     border-bottom-color: $selection;
     border-bottom: 1px solid;
   }
+}
+
+
+@media screen and (min-width: 1280px) {
+
+  // Desktop global classes
+
+
+  section {
+
+  }
+
+  // Portfolio classes
+
   .portfolioItem {
     width: 340px;
   }
+
+  // Footer Desktop classes
+
 
 }

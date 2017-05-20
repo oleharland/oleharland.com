@@ -1,20 +1,33 @@
-$accentColor: #1EFEA5;
-$selection: #23D5FF;
+// $accentColor: #1EFEA5;
+// $selection: #23D5FF;
+//
+//
+// $fontColor: #FFFFFF;
+// $darkColor: #333333;
+//
+//
+// $posterColor: #0F141B;
+// $uphill: #3F5169;
+//
+// $meta: lighten($posterColor, 10%);
+//
 
 
-$fontColor: #FFFFFF;
-$darkColor: #333333;
 
 
-$posterColor: #0F141B;
+$accentColor: #96A1AF;
+$selection: #00C5FF;
+
+
+$fontColor: #2D3642;
+$darkColor: #2D3642;
+
+$posterColor: #FFFFFF;
 $uphill: #3F5169;
 
-$meta: lighten($posterColor, 10%);
+$meta: darken($posterColor, 20%);
 
 
-//
-//
-//
 // $accentColor: #35E1D0;
 // $selection: #1EFEA5;
 //
