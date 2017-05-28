@@ -1,10 +1,9 @@
-// Import other librarys
+// Import other css files
 
 @import "reset.scss";
 @import "variables.scss";
 
-// Starting with global classes
-
+// Global classes
 body {
   background: $posterColor;
   color: $fontColor;
@@ -14,17 +13,38 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+::selection {
+  background: $selection;
+}
+::-moz-selection {
+  background: $selection;
+}
 .wrapper {
   padding-left: 16px;
   padding-right: 16px;
   clear: both;
 }
+
+// Global typography
 h1, h2, h3, h4, h5, h6, h7 {
   font-family: "proxima-nova", sans-serif;
 }
-.intro {
-    padding-left: 16px;
-    padding-right: 16px;
+.proxima {
+  font-family: "proxima-nova", sans-serif;
+}
+a:link, a:visited, a:active {
+  color: $accentColor;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 0px solid $accentColor;
+  transition: linear 0.2s;
+  border-bottom-color: rgba($selection,0%);
+  transition-property: color, border;
+}
+a:focus, a:hover  {
+  color: $selection;
+  border-bottom-color: $selection;
+  border-bottom: 1px solid;
 }
 .textIntro {
   font-size: 32px;
@@ -37,39 +57,20 @@ h1, h2, h3, h4, h5, h6, h7 {
   line-height: 1.5em;
   margin-top: 40px;
 }
+
+// Wrapper
+.intro {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 .wrapper {
   margin-top: 40px;
 }
+
+// Footer elements
 footer {
   padding-bottom: 80px;
 }
-.proxima {
-  font-family: "proxima-nova", sans-serif;
-}
-::selection {
-  background: $selection;
-}
-::-moz-selection {
-  background: $selection;
-}
-a:link, a:visited, a:active {
-  color: $accentColor;
-  text-decoration: none;
-  padding-bottom: 3px;
-  border-bottom: 0px solid $accentColor;
-  transition: linear 0.2s;
-  border-bottom-color: rgba($selection,0%);
-}
-a:focus, a:hover {
-  color: $selection;
-  border-bottom-color: $selection;
-  border-bottom: 1px solid;
-}
-.copyright {
-  color: $meta;
-  margin-top: 16px;
-}
-
 .footerNavi {
 }
 .footerNavi li {
@@ -89,6 +90,12 @@ a:focus, a:hover {
   color: $selection;
   border-bottom-color: $selection;
 }
+.copyright {
+  color: $meta;
+  margin-top: 16px;
+}
+
+// Portfolio
 .portfolio {
   overflow: hidden;
 }
@@ -97,8 +104,8 @@ a:focus, a:hover {
   width: 100%;
   margin-right: 20px;
   margin-bottom: 40px;
-    transition: linear 0.2s;
-    overflow: visible;
+  transition: linear 0.2s;
+  overflow: visible;
 }
 .portfolio a:nth-child(3n+0) .portfolioItem {
   margin-right: 0;
@@ -137,6 +144,7 @@ a:focus, a:hover {
 }
 .portfolioItem .fakeLink {
   transition: linear 0.2s;
+  transition-property: color, border;
 }
 .portfolioItem:hover .fakeLink, .portfolioItem:focus .fakeLink {
   cursor: pointer;
@@ -149,8 +157,15 @@ a:focus, a:hover {
 // Desktop starts here
 
 @media screen and (min-width: 786px) {
-  .portfolioItem {
-    width: 30%;
+
+  // Global classes
+  // Global typography
+  p {
+    margin-bottom: 16px;
+  }
+  h1 {
+    margin-bottom: 32px;
+    font-size: 40px;
   }
   .textIntro {
     font-size: 40px;
@@ -162,6 +177,8 @@ a:focus, a:hover {
     font-size: 24px;
     line-height: 1.5em;
   }
+
+  // Wrapper
   .wrapper, .intro {
     max-width: 1060px;
     margin: 0 auto;
@@ -172,13 +189,8 @@ a:focus, a:hover {
   .textwrapper {
     max-width: 700px;
   }
-  p {
-    margin-bottom: 16px;
-  }
-  h1 {
-    margin-bottom: 32px;
-    font-size: 40px;
-  }
+
+  // Footer Elements
   footer {
     padding-bottom: 160px;
   }
@@ -186,7 +198,7 @@ a:focus, a:hover {
   }
   .footerNavi li {
     display: inline-block;
-    padding-right: 8px;
+    padding-right: 16px;
   }
   .footerNavi li:last-child::after {
     content: "";
@@ -203,20 +215,20 @@ a:focus, a:hover {
     border-bottom-color: $selection;
     border-bottom: 1px solid;
   }
+  // Portfolio
+  .portfolioItem {
+    width: 30%;
+  }
 }
 
 
 @media screen and (min-width: 1280px) {
 
   // Desktop global classes
-
-
   section {
-
   }
 
   // Portfolio classes
-
   .portfolioItem {
     width: 340px;
   }
