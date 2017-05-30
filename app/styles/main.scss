@@ -29,6 +29,36 @@ body {
 h1, h2, h3, h4, h5, h6, h7 {
   font-family: "proxima-nova", sans-serif;
 }
+article p {
+  line-height: 2em;
+}
+p {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.5em;
+  line-height: 1em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.6em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+h4 {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bold;
+}
+q {
+  font-style: italic;
+  font-size: 1.5em;
+  margin-left: 24px;
+  padding-left: 8px;
+  border-left: 2px solid $darkColor;
+}
 .proxima {
   font-family: "proxima-nova", sans-serif;
 }
@@ -165,7 +195,7 @@ footer {
   }
   h1 {
     margin-bottom: 32px;
-    font-size: 40px;
+    font-size: 2.5em;
   }
   .textIntro {
     font-size: 40px;
