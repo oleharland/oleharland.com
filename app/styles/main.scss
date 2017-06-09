@@ -14,10 +14,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 ::selection {
-  background: $selection;
+  background: lighten($selection, 35%);
 }
 ::-moz-selection {
-  background: $selection;
+  background: lighten($selection, 35%);
 }
 .wrapper {
   padding-left: 16px;
