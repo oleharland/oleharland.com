@@ -1,0 +1,286 @@
+// Import other css files
+
+@import "reset.scss";
+@import "variables.scss";
+
+// Global classes
+body {
+  background: $posterColor;
+  color: $fontColor;
+  font-size: 16px;
+  line-height: 1.6em;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+  background: lighten($selection, 35%);
+}
+::-moz-selection {
+  background: lighten($selection, 35%);
+}
+.wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  clear: both;
+}
+
+// Global typography
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: "proxima-nova", sans-serif;
+}
+article p {
+  line-height: 2em;
+}
+p {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.5em;
+  line-height: 1em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.6em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+h4 {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bold;
+}
+q {
+  font-style: italic;
+  font-size: 1.5em;
+  margin-left: 24px;
+  padding-left: 8px;
+  border-left: 2px solid $darkColor;
+}
+.proxima {
+  font-family: "proxima-nova", sans-serif;
+}
+a:link, a:visited, a:active {
+  color: $accentColor;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 0px solid $accentColor;
+  transition: linear 0.2s;
+  border-bottom-color: rgba($selection,0%);
+  transition-property: color, border;
+}
+a:focus, a:hover  {
+  color: $selection;
+  border-bottom-color: $selection;
+  border-bottom: 1px solid;
+}
+.textIntro {
+  font-size: 32px;
+  line-height: 1.5em;
+  margin-top: 10vh;
+  font-weight: 600;
+}
+.textDescription {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 40px;
+}
+.highlight {
+  background-image: linear-gradient(180deg, transparent 60%, #FF0 0);
+}
+
+
+// Wrapper
+.intro {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.wrapper {
+  margin-top: 40px;
+}
+
+// Footer elements
+footer {
+  padding-bottom: 80px;
+}
+.footerNavi {
+}
+.footerNavi li {
+  display: block;
+  padding-right: 8px;
+}
+.footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
+  color: $fontColor;
+  display: block;
+  border-bottom: 1px solid;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  border-bottom-color: darken($posterColor, 10%);
+}
+.footerNavi li a:hover, .footerNavi li a:focus {
+  color: $selection;
+  border-bottom-color: $selection;
+}
+.copyright {
+  color: $meta;
+  margin-top: 16px;
+}
+.new {
+  background-color: $selection;
+  font-weight: bold;
+  padding: 2px 6px 2px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  margin-right: 4px;
+  color: $posterColor;
+}
+
+// Portfolio
+.portfolio {
+  overflow: hidden;
+  display: inline-block;
+}
+.portfolioItem {
+  float: left;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  transition: linear 0.2s;
+  overflow: visible;
+}
+.portfolio div.portfolioRow a:nth-child(3n+0) .portfolioItem {
+  margin-right: 0;
+}
+.portfolioRow {
+    display: inline-block;
+}
+.fakeLink {
+  width: auto;
+  color: $accentColor;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 0px solid $accentColor;
+  transition: linear 0.2s;
+  border-bottom-color: rgba($selection,0%);
+}
+.portfolioImage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  line-height: 0;
+  margin-bottom: 16px;
+}
+.portfolioItem .portfolioImage img {
+  width: 100%;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.portfolio a {
+  color: $fontColor;
+  overflow: hidden;;
+}
+.portfolio a:hover .portfolioItem .portfolioImage img{
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.portfolioItem .fakeLink {
+  transition: linear 0.2s;
+  transition-property: color, border;
+}
+.portfolioItem:hover .fakeLink, .portfolioItem:focus .fakeLink {
+  cursor: pointer;
+  color: $selection;
+  border-bottom-color: $selection;
+  border-bottom: 1px solid;
+}
+
+
+// Desktop starts here
+
+@media screen and (min-width: 786px) {
+
+  // Global classes
+  // Global typography
+  p {
+    margin-bottom: 16px;
+  }
+  h1 {
+    margin-bottom: 32px;
+    font-size: 2.5em;
+  }
+  .textIntro {
+    font-size: 40px;
+    line-height: 1.5em;
+    margin-top: 20vh;
+  }
+  .textDescription {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+
+  // Wrapper
+  .wrapper, .intro {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  .wrapper {
+    margin-top: 80px;
+  }
+  .textwrapper {
+    max-width: 700px;
+  }
+
+  // Footer Elements
+  footer {
+    padding-bottom: 160px;
+  }
+  .footerNavi {
+  }
+  .footerNavi li {
+    display: inline-block;
+    padding-right: 16px;
+  }
+  .footerNavi li:last-child::after {
+    content: "";
+  }
+  .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
+    color: $accentColor;
+    display: inherit;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba($selection,0%);
+    padding: 0;
+  }
+  .footerNavi li a:hover, .footerNavi li a:focus {
+    color: $selection;
+    border-bottom-color: $selection;
+    border-bottom: 1px solid;
+  }
+  // Portfolio
+  .portfolioItem {
+    width: 31.666%;
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+
+  // Desktop global classes
+  section {
+  }
+
+  // Portfolio classes
+  .portfolioItem {
+    width: 340px;
+  }
+
+  // Footer Desktop classes
+
+
+}
