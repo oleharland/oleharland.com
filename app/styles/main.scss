@@ -55,9 +55,14 @@ h4 {
 q {
   font-style: italic;
   font-size: 1.5em;
+  line-height: 1.6em;
   margin-left: 24px;
   padding-left: 8px;
   border-left: 2px solid $darkColor;
+  display: block;
+}
+p, q {
+  margin-bottom: 30px;
 }
 .proxima {
   font-family: "proxima-nova", sans-serif;
@@ -200,16 +205,13 @@ footer {
   border-bottom: 1px solid;
 }
 
-
 // Desktop starts here
 
 @media screen and (min-width: 786px) {
 
   // Global classes
   // Global typography
-  p {
-    margin-bottom: 16px;
-  }
+
   h1 {
     margin-bottom: 32px;
     font-size: 2.5em;
