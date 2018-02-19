@@ -87,6 +87,10 @@ a:focus, a:hover  {
   line-height: 1.5em;
   margin-top: 40px;
 }
+.highlight {
+  background-image: linear-gradient(180deg, transparent 60%, #FF0 0);
+}
+
 
 // Wrapper
 .intro {
@@ -124,10 +128,20 @@ footer {
   color: $meta;
   margin-top: 16px;
 }
+.new {
+  background-color: $selection;
+  font-weight: bold;
+  padding: 2px 6px 2px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  margin-right: 4px;
+  color: $posterColor;
+}
 
 // Portfolio
 .portfolio {
   overflow: hidden;
+  display: inline-block;
 }
 .portfolioItem {
   float: left;
@@ -137,8 +151,11 @@ footer {
   transition: linear 0.2s;
   overflow: visible;
 }
-.portfolio a:nth-child(3n+0) .portfolioItem {
+.portfolio div.portfolioRow a:nth-child(3n+0) .portfolioItem {
   margin-right: 0;
+}
+.portfolioRow {
+    display: inline-block;
 }
 .fakeLink {
   width: auto;
@@ -165,7 +182,7 @@ footer {
 }
 .portfolio a {
   color: $fontColor;
-  overflow: hidden;
+  overflow: hidden;;
 }
 .portfolio a:hover .portfolioItem .portfolioImage img{
   -moz-transform: scale(1.05);
@@ -247,7 +264,7 @@ footer {
   }
   // Portfolio
   .portfolioItem {
-    width: 30%;
+    width: 31.666%;
   }
 }
 
