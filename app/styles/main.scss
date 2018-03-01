@@ -5,19 +5,19 @@
 
 // Global classes
 body {
-  background: $posterColor;
-  color: $fontColor;
+  background: $trueWhite;
+  color: $nightowlBlue;
   font-size: 16px;
   line-height: 1.6em;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-::selection {
-  background: lighten($selection, 35%);
+::electricBlue {
+  background: lighten($electricBlue, 35%);
 }
-::-moz-selection {
-  background: lighten($selection, 35%);
+::-moz-electricBlue {
+  background: lighten($electricBlue, 35%);
 }
 .wrapper {
   padding-left: 16px;
@@ -37,7 +37,7 @@ p {
 }
 h1 {
   font-size: 2.5em;
-  line-height: 1.4em;
+  line-height: 1em;
 }
 h2 {
   font-size: 2em;
@@ -57,7 +57,7 @@ blockquote {
   display: block;
 }
 blockquote span {
-  border-left: 2px solid $darkColor;
+  border-left: 2px solid $nightowlBlue;
   padding-left: 8px;
   display: block;
 }
@@ -78,7 +78,7 @@ blockquote p {
 .subtitle {
   font-size: 2em;
   line-height: 1em;
-  color: $accentColor;
+  color: $stoneBlue;
 }
 p, blockquote {
   margin-bottom: 30px;
@@ -87,17 +87,17 @@ p, blockquote {
   font-family: "proxima-nova", sans-serif;
 }
 a:link, a:visited, a:active {
-  color: $accentColor;
+  color: $stoneBlue;
   text-decoration: none;
   padding-bottom: 3px;
-  border-bottom: 0px solid $accentColor;
+  border-bottom: 1px solid;
   transition: linear 0.2s;
-  border-bottom-color: rgba($selection,0%);
+  border-bottom-color: rgba($electricBlue,0%);
   transition-property: color, border;
 }
 a:focus, a:hover  {
-  color: $selection;
-  border-bottom-color: $selection;
+  color: $electricBlue;
+  border-bottom-color: $electricBlue;
   border-bottom: 1px solid;
 }
 .textIntro {
@@ -136,30 +136,30 @@ a:focus, a:hover  {
   padding-right: 8px;
 }
 .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
-  color: $fontColor;
+  color: $nightowlBlue;
   display: block;
   border-bottom: 1px solid;
   margin-bottom: 16px;
   margin-top: 16px;
   padding-bottom: 16px;
-  border-bottom-color: darken($posterColor, 10%);
+  border-bottom-color: $silverBlue;
 }
 .footerNavi li a:hover, .footerNavi li a:focus {
-  color: $selection;
-  border-bottom-color: $selection;
+  color: $electricBlue;
+  border-bottom-color: $electricBlue;
 }
 .copyright {
-  color: $meta;
+  color: $airforceBlue;
   margin-top: 16px;
 }
 .new {
-  background-color: $selection;
+  background-color: $electricBlue;
   font-weight: bold;
   padding: 2px 6px 2px 6px;
   border-radius: 2px;
   font-size: 12px;
   margin-right: 4px;
-  color: $posterColor;
+  color: $trueWhite;
 }
 
 // Portfolio
@@ -183,12 +183,13 @@ a:focus, a:hover  {
 }
 .fakeLink {
   width: auto;
-  color: $accentColor;
+  color: $stoneBlue;
   text-decoration: none;
   padding-bottom: 3px;
-  border-bottom: 0px solid $accentColor;
+  border-bottom: 1px solid;
   transition: linear 0.2s;
-  border-bottom-color: rgba($selection,0%);
+  border-bottom-color: rgba($electricBlue,0%);
+  transition-property: color, border;
 }
 .portfolioImage {
   position: relative;
@@ -205,7 +206,7 @@ a:focus, a:hover  {
   transition: all 0.3s;
 }
 .portfolio a {
-  color: $fontColor;
+  color: $nightowlBlue;
   overflow: hidden;;
 }
 .portfolio a:hover .portfolioItem .portfolioImage img{
@@ -214,15 +215,21 @@ a:focus, a:hover  {
   transform: scale(1.05);
 }
 .portfolioItem .fakeLink {
+  color: $stoneBlue;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid;
   transition: linear 0.2s;
+  border-bottom-color: rgba($electricBlue,0%);
   transition-property: color, border;
 }
 .portfolioItem:hover .fakeLink, .portfolioItem:focus .fakeLink {
   cursor: pointer;
-  color: $selection;
-  border-bottom-color: $selection;
+  color: $electricBlue;
+  border-bottom-color: $electricBlue;
   border-bottom: 1px solid;
 }
+
 
 // Desktop starts here
 
@@ -230,7 +237,9 @@ a:focus, a:hover  {
 
   // Global classes
   // Global typography
-
+  p {
+    margin-bottom: 16px;
+  }
   h1 {
     margin-bottom: 32px;
     font-size: 2.5em;
@@ -255,8 +264,9 @@ a:focus, a:hover  {
     margin-top: 80px;
   }
   .textwrapper {
-    max-width: 720px;
+    max-width: 700px;
   }
+  
   .articleWrapper {
     margin: 0 auto;
     max-width: 720px;
@@ -276,15 +286,14 @@ a:focus, a:hover  {
     content: "";
   }
   .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
-    color: $accentColor;
+    color: $stoneBlue;
     display: inherit;
-    border-bottom: 1px solid;
-    border-bottom-color: rgba($selection,0%);
+    border-bottom: 1px solid rgba($electricBlue, 0%);
     padding: 0;
   }
   .footerNavi li a:hover, .footerNavi li a:focus {
-    color: $selection;
-    border-bottom-color: $selection;
+    color: $electricBlue;
+    border-bottom-color: $electricBlue;
     border-bottom: 1px solid;
   }
   // Portfolio
