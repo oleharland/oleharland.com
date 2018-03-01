@@ -13,7 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-::electricBlue {
+::selection {
   background: lighten($electricBlue, 35%);
 }
 ::-moz-electricBlue {
@@ -52,6 +52,7 @@ h4 {
   line-height: 2em;
   font-weight: bold;
 }
+<<<<<<< HEAD
 blockquote {
   margin-left: 24px;
   display: block;
@@ -82,6 +83,14 @@ blockquote p {
 }
 p, blockquote {
   margin-bottom: 30px;
+=======
+q {
+  font-style: italic;
+  font-size: 1.5em;
+  margin-left: 24px;
+  padding-left: 8px;
+  border-left: 2px solid $nightowlBlue;
+>>>>>>> master
 }
 .proxima {
   font-family: "proxima-nova", sans-serif;
@@ -126,7 +135,11 @@ a:focus, a:hover  {
 }
 
 // Footer elements
+<<<<<<< HEAD
 #footer {
+=======
+footer {
+>>>>>>> master
   padding-bottom: 80px;
 }
 .footerNavi {
@@ -266,7 +279,8 @@ a:focus, a:hover  {
   .textwrapper {
     max-width: 700px;
   }
-  
+<<<<<<< HEAD
+
   .articleWrapper {
     margin: 0 auto;
     max-width: 720px;
@@ -274,6 +288,11 @@ a:focus, a:hover  {
 
   // Footer Elements
   #footer {
+=======
+
+  // Footer Elements
+  footer {
+>>>>>>> master
     padding-bottom: 160px;
   }
   .footerNavi {
