@@ -19,14 +19,14 @@ a:focus, a:hover  {
 }
 .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
  color: $stoneBlue;
- border-bottom-color: $stoneBlue;
+ border-bottom-color: rgba($stoneBlue,0);
 }
 .footerNavi li a:hover, .footerNavi li a:focus {
   color: $electricBlue;
   border-bottom-color: $electricBlue;
 }
 .copyright {
-  color: $stoneBlue;
+  color: $midnightBlue;
 }
 .new {
   background-color: $electricBlue;

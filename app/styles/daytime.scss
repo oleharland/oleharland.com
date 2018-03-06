@@ -18,8 +18,8 @@ a:focus, a:hover  {
   border-bottom-color: $electricBlue;
 }
 .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
- color: $nightowlBlue;
- border-bottom-color: $silverBlue;
+ color: $stoneBlue;
+ border-bottom-color: rgba($stoneBlue,0);
 }
 .footerNavi li a:hover, .footerNavi li a:focus {
   color: $electricBlue;
