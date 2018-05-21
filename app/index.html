@@ -54,13 +54,9 @@
 
     function getStylesheet() {
           var currentTime = new Date().getHours();
-          if (0 <= currentTime&&currentTime < 8) {
-           document.write("<link rel='stylesheet' href='styles/nighttime.css' type='text/css'>");
-          }
-          if (8 <= currentTime&&currentTime < 18) {
+          if (8 <= currentTime&&currentTime < 19) {
            document.write("<link rel='stylesheet' href='styles/daytime.css' type='text/css'>");
-          }
-          if (18 <= currentTime&&currentTime < 23) {
+         } else {
            document.write("<link rel='stylesheet' href='styles/nighttime.css' type='text/css'>");
           }
     };
