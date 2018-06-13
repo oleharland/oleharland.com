@@ -192,6 +192,24 @@ footer {
   border-bottom-color: $electricBlue;
   border-bottom: 1px solid;
 }
+.themeToggle {
+  height: 56px;
+  position: fixed;
+  z-index: 999;
+  background: $silverBlue;
+  display: block;
+  top: 40px;
+  right: 40px;
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: $airforceBlue;
+}
+.themeToggle * {
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
 
 
 // Desktop starts here

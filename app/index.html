@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html id="site" lang="" class="">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,22 +48,10 @@
     -->
 
     <link rel="stylesheet" type="text/css" href="styles/newmain.css">
+    <link rel="stylesheet" href="styles/day.css">
+    <link rel="stylesheet" href="styles/night.css">
 
-
-    <script>
-
-    function getStylesheet() {
-          var currentTime = new Date().getHours();
-          if (8 <= currentTime&&currentTime < 19) {
-           document.write("<link rel='stylesheet' href='styles/daytime.css' type='text/css'>");
-         } else {
-           document.write("<link rel='stylesheet' href='styles/nighttime.css' type='text/css'>");
-          }
-    };
-
-    getStylesheet();
-
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <noscript><link href="styles/daytime.css" rel="stylesheet"></noscript>
 
@@ -72,6 +60,16 @@
 
   </head>
   <body>
+    <div id="themeToggle" class="themeToggle">
+      <span>Toggle day/night mode</span>
+    </div>
+
+    <script>
+    $("#themeToggle").click(function(){
+      $("#site").toggleClass("night");
+    });
+    </script>
+
     <div class="outerContainer">
 
       <section>
