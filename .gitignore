@@ -3,5 +3,4 @@ dist/
 .tmp
 app.yaml
 .DS_Store
-app/.DS_Store
-deploy.sh
+app/.DS_Storo

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html id="site" lang="" class="">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,13 +46,44 @@
     <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <link rel="stylesheet" type="text/css" href="styles/newmain.css">
+    <link rel="stylesheet" href="styles/day.css">
+    <link rel="stylesheet" href="styles/night.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      function getStylesheet() {
+        var currentTime = new Date().getHours();
+        if (8 <= currentTime&&currentTime < 19) {
+         $("#site").toggleClass("");
+         console.log('first event');
+       } else {
+         var element = $("#site").toggleClass("night");
+         console.log('second event');
+        }
+      };
+      getStylesheet();
+    </script>
+
+    <noscript><link href="styles/daytime.css" rel="stylesheet"></noscript>
+
 
     <meta name="google-site-verification" content="ur_OQVKYYOmZ5a__JCw-TaqLXvclV2-xpSFKlmEMN9k" />
 
   </head>
   <body>
+    <div id="themeToggle" class="themeToggle">
+      <span>Toggle day/night mode</span>
+    </div>
+
+    <script>
+    $("#themeToggle").click(function(){
+      $("#site").toggleClass("night");
+    });
+    </script>
+
     <div class="outerContainer">
 
       <section>
@@ -78,28 +109,24 @@
             <div class="portfolio">
 
               <div class="portfolioRow">
-              <a href="#" target="_blank">
                 <div class="portfolioItem">
                   <div class="portfolioImage">
-                    <img src="images/xing-email.png" alt="">
+                    <img src="images/xing-email.jpg" alt="XING email design system">
                   </div>
                   <p><span class="new">NEW</span> XING Email design system – A new language and way of building emails at XING.</p>
                   <span class="copyright">full case coming soon</span>
                 </div>
-              </a>
-              <a href="#" target="_blank">
                 <div class="portfolioItem">
                   <div class="portfolioImage">
-                    <img src="images/xing-notification-ios.png" alt="">
+                    <img src="images/xing-notification-ios.jpg" alt="XING notification center">
                   </div>
                   <p><span class="new">NEW</span> XING notification center – All your relevant information in one place.</p>
                   <span class="copyright">full case coming soon</span>
                 </div>
-              </a>
               <a href="https://itunes.apple.com/de/app/gerolsteiner-trinkcheck-dein/id370892661?mt=8&utm_content=buffer80651&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer" target="_blank">
                 <div class="portfolioItem">
                   <div class="portfolioImage">
-                      <img src="images/gerolsteiner.png" alt="">
+                      <img src="images/gerolsteiner.jpg" alt="Gerolsteiner DrinkCheck App">
                   </div>
                   <p>Gerolsteiner DrinkCheck App – Make sure you drink enough water!</p>
                   <span class="fakeLink">Visit the app store →</span>
@@ -109,7 +136,7 @@
 
             <div class="portfolioRow">
               <a href="https://www.behance.net/gallery/16401619/Migros-App" target="_blank">
-                <div class="portfolioItem"><div class="portfolioImage"><img src="images/migros.png" alt=""></div>
+                <div class="portfolioItem"><div class="portfolioImage"><img src="images/migros.jpg" alt="Migros App"></div>
                   <p>Migros App – Your personal shopping assistant.</p>
                   <span class="fakeLink">View full case on behance →</span>
                 </div>
@@ -117,7 +144,7 @@
               <a href="https://www.behance.net/gallery/5834107/Leica-Camera-AG-Global-Website" target="_blank">
                 <div class="portfolioItem">
                   <div class="portfolioImage">
-                    <img src="images/leica.png" alt="">
+                    <img src="images/leica.jpg" alt="Leica global website relaunch">
                   </div>
                   <p>Leica global website relaunch</p>
                   <span class="fakeLink">View full case on behance →</span>
@@ -190,7 +217,7 @@
     </div>
 
     <!-- build:js scripts/main.min.js -->
-    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/main.js"></script> -->
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

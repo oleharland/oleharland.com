@@ -1,0 +1,53 @@
+// Import other css files
+
+@import "variables.scss";
+
+// Global classes
+
+  body {
+    background: $trueWhite;
+    color: $nightowlBlue;
+    transition: all 0.75s ease-in;
+
+  }
+  q {
+    border-left-color: $trueWhite;
+    transition: all 0.75s ease-in;
+
+  }
+  a:link, a:visited, a:active {
+    color: $stoneBlue;
+    transition: all 0.75s ease-in;
+  }
+  a:focus, a:hover  {
+    color: $electricBlue;
+    border-bottom-color: $electricBlue;
+    transition: all 0.75s ease-in;
+  }
+  .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
+   color: $stoneBlue;
+   border-bottom-color: rgba($stoneBlue,0);
+   transition: all 0.75s ease-in;
+  }
+  .footerNavi li a:hover, .footerNavi li a:focus {
+    color: $electricBlue;
+    border-bottom-color: $electricBlue;
+    transition: all 0.75s ease-in;
+  }
+  .copyright {
+    color: $airforceBlue;
+    transition: all 0.75s ease-in;
+  }
+  .new {
+    background-color: $electricBlue;
+    color: $trueWhite;
+    transition: all 0.75s ease-in;
+  }
+  .fakeLink {
+    color: $stoneBlue;
+    transition: all 0.75s ease-in;
+  }
+  .portfolio a {
+    color: $nightowlBlue;
+    transition: all 0.75s ease-in;
+  }

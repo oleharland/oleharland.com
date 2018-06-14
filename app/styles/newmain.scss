@@ -5,8 +5,6 @@
 
 // Global classes
 body {
-  background: $trueWhite;
-  color: $nightowlBlue;
   font-size: 16px;
   line-height: 1.6em;
   font-family: "Open Sans", sans-serif;
@@ -52,50 +50,17 @@ h4 {
   line-height: 2em;
   font-weight: bold;
 }
-
-blockquote {
-  margin-left: 24px;
-  display: block;
-}
-blockquote span {
-  border-left: 2px solid $nightowlBlue;
-  padding-left: 8px;
-  display: block;
-}
-blockquote p:before {
-  content: '„';
-}
-blockquote p:after {
-  content: '“';
-}
-blockquote p {
-  font-style: italic;
-}
-.statement {
-  font-size: 1.5em;
-  font-weight: 600;
-  line-height: 1.7em;
-}
-.subtitle {
-  font-size: 2em;
-  line-height: 1em;
-  color: $stoneBlue;
-}
-p, blockquote {
-  margin-bottom: 30px;
-=======
 q {
   font-style: italic;
   font-size: 1.5em;
   margin-left: 24px;
   padding-left: 8px;
-  border-left: 2px solid $nightowlBlue;
+  border-left: 2px solid;
 }
 .proxima {
   font-family: "proxima-nova", sans-serif;
 }
 a:link, a:visited, a:active {
-  color: $stoneBlue;
   text-decoration: none;
   padding-bottom: 3px;
   border-bottom: 1px solid;
@@ -104,8 +69,6 @@ a:link, a:visited, a:active {
   transition-property: color, border;
 }
 a:focus, a:hover  {
-  color: $electricBlue;
-  border-bottom-color: $electricBlue;
   border-bottom: 1px solid;
 }
 .textIntro {
@@ -134,8 +97,7 @@ a:focus, a:hover  {
 }
 
 // Footer elements
-
-#footer {
+footer {
   padding-bottom: 80px;
 }
 .footerNavi {
@@ -145,30 +107,23 @@ a:focus, a:hover  {
   padding-right: 8px;
 }
 .footerNavi li a:link, .footerNavi li a:visited, .footerNavi li a:active {
-  color: $nightowlBlue;
   display: block;
   border-bottom: 1px solid;
   margin-bottom: 16px;
   margin-top: 16px;
   padding-bottom: 16px;
-  border-bottom-color: $silverBlue;
 }
 .footerNavi li a:hover, .footerNavi li a:focus {
-  color: $electricBlue;
-  border-bottom-color: $electricBlue;
 }
 .copyright {
-  color: $airforceBlue;
   margin-top: 16px;
 }
 .new {
-  background-color: $electricBlue;
   font-weight: bold;
   padding: 2px 6px 2px 6px;
   border-radius: 2px;
   font-size: 12px;
   margin-right: 4px;
-  color: $trueWhite;
 }
 
 // Portfolio
@@ -192,7 +147,6 @@ a:focus, a:hover  {
 }
 .fakeLink {
   width: auto;
-  color: $stoneBlue;
   text-decoration: none;
   padding-bottom: 3px;
   border-bottom: 1px solid;
@@ -238,11 +192,36 @@ a:focus, a:hover  {
   border-bottom-color: $electricBlue;
   border-bottom: 1px solid;
 }
+.themeToggle {
+  position: fixed;
+  z-index: 999;
+  bottom: 16px;
+  background: $silverBlue;
+  color: $midnightBlue;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: $airforceBlue;
+  transition: all 0.75s ease-in;
+  left: 50%;
+  margin-left:-92px;
+}
+.themeToggle * {
+  padding: 8px 16px 8px 16px;
+  display: block;
+}
 
 
 // Desktop starts here
 
 @media screen and (min-width: 786px) {
+  .themeToggle {
+    top: 40px;
+    left: auto;
+    right: 40px;
+    bottom: auto;
+    display: block;
+  }
 
   // Global classes
   // Global typography
@@ -251,7 +230,7 @@ a:focus, a:hover  {
   }
   h1 {
     margin-bottom: 32px;
-    font-size: 2.5em
+    font-size: 2.5em;
   }
   .textIntro {
     font-size: 40px;
@@ -275,13 +254,9 @@ a:focus, a:hover  {
   .textwrapper {
     max-width: 700px;
   }
-  .articleWrapper {
-    margin: 0 auto;
-    max-width: 720px;
-  }
 
   // Footer Elements
-  #footer {
+  footer {
     padding-bottom: 160px;
   }
   .footerNavi {
@@ -316,9 +291,13 @@ a:focus, a:hover  {
   // Desktop global classes
   section {
   }
+
   // Portfolio classes
   .portfolioItem {
     width: 340px;
   }
+
   // Footer Desktop classes
+
+
 }
