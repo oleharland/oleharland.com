@@ -40,7 +40,11 @@
     color: $trueWhite;
   }
   .themeToggle {
-    background: $stoneBlue;
+    background: $midnightBlue;
+    border-color: $stoneBlue;
+    color: $stoneBlue;
+  }
+  .themeToggle *{
   }
 
 }
