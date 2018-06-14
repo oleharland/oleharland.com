@@ -57,11 +57,11 @@
       function getStylesheet() {
         var currentTime = new Date().getHours();
         if (8 <= currentTime&&currentTime < 19) {
-         var element = document.getElementById("#site");
-         element.toggleClass("night");
+         $("#site").toggleClass("");
+         console.log('first event');
        } else {
-         var element = document.getElementById("#site");
-         element.toggleClass("night");
+         var element = $("#site").toggleClass("night");
+         console.log('second event');
         }
       };
       getStylesheet();

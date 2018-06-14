@@ -1,4 +1,4 @@
-wor echo "Starting in 5 seconds to 🚢"
+echo "Starting in 5 seconds to 🚢"
 echo "————————————————"
 sleep 5
 gulp clean
