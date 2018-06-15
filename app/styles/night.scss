@@ -44,6 +44,11 @@
     border-color: $stoneBlue;
     color: $stoneBlue;
   }
+  .themeToggle:hover, .themeToggle:focus {
+    border-color: $electricBlue;
+    color: $trueWhite;
+    background-color: $electricBlue;
+  }
   .themeToggle *{
   }
 
