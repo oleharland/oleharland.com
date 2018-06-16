@@ -202,9 +202,15 @@ footer {
   border-radius: 8px;
   border: 1px solid;
   border-color: $airforceBlue;
-  transition: all 0.75s ease-in;
+  transition: all 0.25s ease-in;
   left: 50%;
   margin-left:-92px;
+  cursor: pointer;
+}
+.themeToggle:hover, .themeToggle:focus {
+  border-color: $electricBlue;
+  color: $trueWhite;
+  background-color: $electricBlue;
 }
 .themeToggle * {
   padding: 8px 16px 8px 16px;
