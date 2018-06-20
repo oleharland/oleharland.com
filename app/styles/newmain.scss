@@ -32,6 +32,7 @@ article p {
 }
 p {
   font-size: 16px;
+  margin-bottom: 16px;
 }
 h1 {
   font-size: 2.5em;
@@ -50,13 +51,25 @@ h4 {
   line-height: 2em;
   font-weight: bold;
 }
-q {
+blockquote span {
   font-style: italic;
   font-size: 1.5em;
   margin-left: 24px;
   padding-left: 8px;
   border-left: 2px solid;
+  display: block;
 }
+blockquote footer {
+  padding-bottom: 16px;
+  margin-left: 24px;
+}
+i {
+  font-style: italic;
+}
+strong {
+  font-weight: 800;
+}
+
 .proxima {
   font-family: "proxima-nova", sans-serif;
 }
@@ -94,7 +107,7 @@ a:focus, a:hover  {
 }
 
 // Footer elements
-footer {
+#footer {
   padding-bottom: 80px;
 }
 .footerNavi {
@@ -229,7 +242,6 @@ footer {
   // Global classes
   // Global typography
   p {
-    margin-bottom: 16px;
   }
   h1 {
     margin-bottom: 32px;
@@ -259,7 +271,7 @@ footer {
   }
 
   // Footer Elements
-  footer {
+  #footer {
     padding-bottom: 160px;
   }
   .footerNavi {
