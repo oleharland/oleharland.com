@@ -84,6 +84,28 @@
     });
     </script>
 
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#f4f6f9",
+          "text": "#141618"
+        },
+        "button": {
+          "background": "#00c5ff",
+          "text": "#ffffff"
+        }
+      },
+      "position": "bottom",
+      "content": {
+        "message": "🍪 This website uses cookies to ensure you get the best experience on our website."
+      }
+    })});
+    </script>
+
     <div class="outerContainer">
 
       <section>
@@ -174,7 +196,9 @@
               <li><a href="https://www.linkedin.com/in/oleharland/" target="_blank">LinkedIn</a></li>
               <li><a href="https://www.xing.com/profile/Ole_Harland?sc_o=mxb_p" target="_blank">XING</a></li>
             </ul>
+            <p><a href="/legalnotice.html">Legal notice / Impressum – Data protection / Datenschutz</a></p>
             <p class="copyright">© 2011 - 2018 – All rights reserved by www.oleharland.com</p>
+
           </div>
         </footer>
 
