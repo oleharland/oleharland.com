@@ -107,6 +107,35 @@ a:focus, a:hover  {
     padding-left: 16px;
     padding-right: 16px;
 }
+.contentWrapper {
+}
+@keyframes fadeIn {
+    from {
+      margin-top: -16px;
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+}
+.fadeIn {
+  opacity:0;
+  opacity: 1 \9; /*just in case ie*/
+  -webkit-animation:fadeIn ease-out 1;
+  -moz-animation:fadeIn ease-out 1;
+  animation:fadeIn ease-out 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+.fadeIn.contentWrapper {
+  animation-delay: 0.5s;
+}
 .wrapper {
   margin-top: 40px;
 }
