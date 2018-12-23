@@ -5,7 +5,7 @@
 // Global classes
 .night {
   body {
-    background: $nightowlBlue;
+    background: $trueBlack;
     color: $trueWhite;
   }
   q {
@@ -40,12 +40,12 @@
     color: $trueWhite;
   }
   .themeToggle {
-    background: $midnightBlue;
-    border-color: $stoneBlue;
+    background: $nightowlBlue;
+    border-color: $midnightBlue;
     color: $stoneBlue;
   }
   .themeToggle:hover, .themeToggle:focus {
-    border-color: $electricBlue;
+    border-color: $stoneBlue;
     color: $trueWhite;
     background-color: $electricBlue;
   }

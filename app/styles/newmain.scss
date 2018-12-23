@@ -5,7 +5,7 @@
 
 // Global classes
 body {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6em;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,12 +26,23 @@ body {
 // Global typography
 h1, h2, h3, h4, h5, h6, h7 {
   font-family: "proxima-nova", sans-serif;
+  font-weight: 800;
+}
+ol {
+  list-style: decimal;
+  list-style-position: outside;
+  margin: 0;
+}
+ol li {
+  list-style-position: outside;
+  margin-left: 40px;
+  margin-top: 8px;
 }
 article p {
   line-height: 2em;
 }
 p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 16px;
 }
 h1 {
@@ -91,14 +102,15 @@ a:focus, a:hover  {
 }
 .textIntro {
   font-size: 32px;
-  line-height: 1.5em;
+  line-height: 1.2em;
   margin-top: 10vh;
-  font-weight: 600;
+  font-weight: 800;
 }
 .textDescription {
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 18px;
+  line-height: 1.6em;
   margin-top: 40px;
+  font-weight: normal;
 }
 
 
@@ -241,12 +253,12 @@ a:focus, a:hover  {
   position: fixed;
   z-index: 999;
   bottom: 16px;
-  background: $silverBlue;
+  background: $trueWhite;
   color: $midnightBlue;
   font-size: 14px;
   border-radius: 8px;
   border: 1px solid;
-  border-color: $airforceBlue;
+  border-color: $silverBlue;
   transition: all 0.25s ease-in;
   left: 50%;
   margin-left:-92px;
@@ -284,7 +296,6 @@ a:focus, a:hover  {
   }
   .textIntro {
     font-size: 40px;
-    line-height: 1.5em;
     margin-top: 20vh;
   }
   .textDescription {
@@ -302,12 +313,24 @@ a:focus, a:hover  {
     margin-top: 80px;
   }
   .textwrapper {
-    max-width: 700px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .getintouch {
+  }
+  .getintouch .wrapper {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    font-weight: 600;
   }
 
   // Footer Elements
   #footer {
     padding-bottom: 160px;
+  }
+  #footer .wrapper {
+    margin-top: 0;
   }
   .footerNavi {
   }
